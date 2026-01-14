@@ -1,6 +1,6 @@
-//EXERCICE NON FINI
 
-//window.addEventListener("DOMContentLoaded", function() {
+
+window.addEventListener("DOMContentLoaded", function() {
     
 
     let username = sessionStorage.getItem("username")
@@ -12,4 +12,4 @@
     } else {
         window.alert("Bonjour " + username + " !")
     }
-//});
+});
