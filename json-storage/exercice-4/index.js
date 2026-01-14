@@ -6,14 +6,18 @@ let user = {
 
 document.addEventListener("DOMContentLoaded", function(){
     
-    let userStorage = sessionStorage.getItem("user");
     
-    if (userStorage) {
-        let userJS = JSON.parse(userStorage)
-        console.log(userJS);
+    let userStorage = sessionStorage.getItem("user");
+    console.log(userStorage)
+    
+    if (!userStorage) {
+        let userJSON = JSON.stringify(user)
+        sessionStorage.setItem("user", userJSON)
+        console.log(userJSON)
     } else {
-        let userJson = JSON.stringify("user")
-        sessionStorage.setItem("userJson", user);
+        let getUser = sessionStorage.getItem("user")
+        let userJS = JSON.parse(getUser);
+        console.log(userJS)
     }
 });
 
